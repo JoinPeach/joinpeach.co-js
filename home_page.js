@@ -262,6 +262,7 @@ const setSliderDefaults = (target, withSecondUpdate = false) => {
 	setSliderBackgroundSize(outstandingAmountSlider, true);
 }
 
+// TODO(mahir): Clean this up once its working.
 const setReferralSource = () => {
   var queryString = window.location.search;
   // ?utm_source=facebook&utm_medium=post&utm_campaign=webflow
