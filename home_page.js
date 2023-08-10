@@ -1,3 +1,17 @@
+/*
+
+Instructions: https://github.com/NoCodeQuest/webflow-10k-limit-bypassed
+
+CDN 1: https://www.jsdelivr.com/github
+CDN 2: https://raw.githack.com/
+
+Public file: https://raw.githubusercontent.com/mskalra/joinpeach.co-js/main/home_page.js
+
+Use CDN 2 and then update webflow script:
+<script type="text/javascript" src="<ADD_CDN_LINK_HERE>"></script>
+
+*/
+
 function inView(elem){
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
@@ -274,8 +288,6 @@ const setReferralSource = () => {
   ];
 
   for (const utm_element of utmParameters) {
-    console.error('save and send referral source');
-
     document.getElementById(utm_element).value = URLSearchParams_wb.get(utm_element)
     /* if utm_source exist */
     // $( "form" ).each(function( index ) {
@@ -293,7 +305,6 @@ const setReferralSource = () => {
 }
 
 window.addEventListener('load', (event) => {
-  console.error('loading from cdn! woot!');
   setCalcData();
   setSliderDefaults();
   setReferralSource();
