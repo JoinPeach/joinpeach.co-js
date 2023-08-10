@@ -206,7 +206,6 @@ const setCalcData = (type = "credit") => {
       additionalPayment
     );
   } else if (type === "credit") {
-  		console.log('credit')
       calculated = calcCredit(
       outstandingAmountSlider.value,
       interestRate,
