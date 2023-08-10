@@ -8,7 +8,7 @@ CDN 2: https://raw.githack.com/
 Public file: https://raw.githubusercontent.com/mskalra/joinpeach.co-js/main/home_page.js
 
 Use CDN 2 and then update webflow script:
-<script type="text/javascript" src="<ADD_CDN_LINK_HERE>"></script>
+<script type="text/javascript" src="ADD_CDN_LINK_HERE"></script>
 
 */
 
