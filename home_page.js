@@ -291,7 +291,7 @@ const setReferralSource = () => {
 }
 
 window.addEventListener('load', (event) => {
-  console.error('loading from cdn!');
+  console.error('loading from cdn! woot!');
   setCalcData();
   setSliderDefaults();
   setReferralSource();
