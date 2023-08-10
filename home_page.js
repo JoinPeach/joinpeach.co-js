@@ -264,7 +264,6 @@ const setSliderDefaults = (target, withSecondUpdate = false) => {
 
 const setReferralSource = () => {
   var queryString = window.location.search;
-  console.error(queryString);
   // ?utm_source=facebook&utm_medium=post&utm_campaign=webflow
   var URLSearchParams_wb = new URLSearchParams(queryString);
 
@@ -275,17 +274,20 @@ const setReferralSource = () => {
   ];
 
   for (const utm_element of utmParameters) {
-    /* if utm_source exist */
-    $( "form" ).each(function( index ) {
-      if(URLSearchParams_wb.has(utm_element)){
-        console.log(utm_element + "is exist");
-        /* get UTM value of this utm param */
-        var value = URLSearchParams_wb.get(utm_element)
-        /* change form hidden feild to this utm url value */
-        $( this ).find("."+utm_element).val(value);
-      }
+    console.error('save and send referral source');
 
-    })
+    document.getElementById(utm_element).value = URLSearchParams_wb.get(utm_element)
+    /* if utm_source exist */
+    // $( "form" ).each(function( index ) {
+    //   if(URLSearchParams_wb.has(utm_element)){
+    //     console.log(utm_element + "is exist");
+    //     /* get UTM value of this utm param */
+
+    //     /* change form hidden feild to this utm url value */
+    //     $( this ).find("."+utm_element).val(value);
+    //   }
+
+    // })
   }/* end for loop */
 
 }
